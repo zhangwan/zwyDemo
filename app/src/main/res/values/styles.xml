@@ -1,0 +1,120 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <declare-styleable name="ShowAllTextView">
+        <attr name="maxShowLines" format="integer" />
+        <attr name="rightMenuText" format="string" />
+        <attr name="viewClick" format="boolean" />
+        <attr name="renewViewClick" format="boolean"/>
+        <attr name="leftMargin" format="dimension"/>
+        <attr name="rightMargin" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="ExpandableTextViewAttr">
+        <!-- 允许显示最大行数 -->
+        <attr name="maxExpandLines" format="integer"></attr>
+        <!-- 动画执行时间 -->
+        <attr name="duration" format="integer"></attr>
+    </declare-styleable>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="self_dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.1</item>
+    </style>
+    <style name="EditTextBase">
+        <item name="android:background">@null</item>
+        <item name="android:layout_width">0dip</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textColor">@color/gray28</item>
+        <item name="android:textColorHint">@color/gray99</item>
+        <item name="android:textSize">@dimen/textSize12</item>
+    </style>
+    <style name="EditTextPassword" parent="EditTextBase">
+        <item name="android:digits">@string/digits_1</item>
+        <item name="android:maxLength">16</item>
+        <item name="android:inputType">textPassword</item>
+    </style>
+    <!--       style        -->
+    <style name="TextInfoType">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/gray99</item>
+        <item name="android:textSize">@dimen/textSize12</item>
+    </style>
+
+    <style name="TextviewType">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/size40</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/textview_color</item>
+        <item name="android:textSize">@dimen/textSize16</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@drawable/textview_selector</item>
+    </style>
+
+    <!--Toolbar弹出popup主题的设置-->
+    <style name="OverflowMenuTheme" parent="Widget.AppCompat.Light.PopupMenu.Overflow">
+        <item name="overlapAnchor">false</item><!--这个属性设置为false，就能使得popup在Toolbar的下面显示-->
+    </style>
+    <style name="ToolBarPopupTheme" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:colorBackground">@color/Grey700</item><!--设置背景颜色的-->
+        <item name="android:textColorPrimary">@android:color/white</item><!--设置文字颜色的-->
+        <item name="android:textSize">16sp</item><!--设置文字大小的-->
+        <item name="actionOverflowMenuStyle">@style/OverflowMenuTheme</item><!--设置弹出位置的主题-->
+         <item name="android:paddingTop">-5dp</item>
+
+    </style>
+
+
+    <!--TextnputLayout的文字修改-->
+    <style name="TextInputLayoutStyle">
+        <item name="android:textSize">20sp</item>
+        <!--这个是控制你输入的字母大小写的！-->
+        <item name="android:textColor">#91452e</item>
+    </style>
+
+    <!--    需要添加com.google.android.material-->
+    <!--    很多Material Design UI要求必须使用MaterialComponents主题-->
+    <style name="MaterialAppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="MaterialAppThemeNoActionBar" parent="MaterialAppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="TranslucentTheme" parent="MaterialAppTheme">
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <!--navigationIcon和Title的距离问题-->
+    <style name="NoSpaceActionBarTheme" parent="Base.Widget.AppCompat.Toolbar">
+        <item name="contentInsetStart">0dp</item>
+        <item name="contentInsetStartWithNavigation">0dp</item>
+    </style>
+
+</resources>
